@@ -53,9 +53,9 @@ Do đó, một chữ ký hợp lệ từ thời điểm A có thể bị tái s�
 - Biện pháp giảm thiểu:
   + Sử dụng TSA (RFC 3161) để nhận timestamp token từ bên thứ ba đáng tin cậy; timestamp này là bằng chứng thời gian khách quan, khó bị làm giả.
   + Gắn unique document identifier (UUID/hash) inside signedAttrs — đảm bảo chữ ký ràng buộc chặt với một ID duy nhất của tài liệu.
-+ Lưu evidence/manifest: lưu log dấu thời gian, hash file, và metadata ký (serial số chứng chỉ, nonce) ở kho chứng cứ trung tâm; khi verify, so sánh với bản registry.
-+ Policy xử lý detached signatures: không chấp nhận signature nếu metadata/hash không khớp hoặc nếu đã bị dùng trước đó mà policy cấm reuse.
-+ Sử dụng nonces trong các protocol giao tiếp (nếu chữ ký phát sinh qua giao thức) để ngăn replay trong phiên.
+  + Lưu evidence/manifest: lưu log dấu thời gian, hash file, và metadata ký (serial số chứng chỉ, nonce) ở kho chứng cứ trung tâm; khi verify, so sánh với bản registry.
+  + Policy xử lý detached signatures: không chấp nhận signature nếu metadata/hash không khớp hoặc nếu đã bị dùng trước đó mà policy cấm reuse.
+  + Sử dụng nonces trong các protocol giao tiếp (nếu chữ ký phát sinh qua giao thức) để ngăn replay trong phiên.
 
 
 
